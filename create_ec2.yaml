@@ -5,8 +5,8 @@
   tasks:
   - name: create EC2
     amazon.aws.ec2_instance:
-      instance_type: t3.small
-      image_id: ami-0e731c8a588258d0d
+      instance_type: t2.micro
+      image_id: ami-0c20d88b0021158c6
       count: 1
       region: us-east-2
      # network:
