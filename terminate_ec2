@@ -1,0 +1,21 @@
+---
+- name: EC2
+  hosts: localhost
+  vars:
+    name: test
+    instancetype: t2.micro
+    imageid: ami-0c20d88b0021158c6
+    counts: 1
+    ec2region: us-east-2
+    iam_role: EC2SSM
+    
+  tasks:
+  - name: terminate EC2
+    amazon.aws.ec2_instance:
+      name: "{{ name }}"
+      region: "{{ ec2region }}"
+     # network:
+     #   assign_public_ip: true
+     #   security_group: default
+     #   vpc_subnet_id: subnet-0123456
+      state: absent
