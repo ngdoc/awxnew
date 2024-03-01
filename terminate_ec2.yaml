@@ -18,4 +18,4 @@
      #   assign_public_ip: true
      #   security_group: default
      #   vpc_subnet_id: subnet-0123456
-      state: absent
+      state: stopped
