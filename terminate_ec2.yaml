@@ -1,3 +1,4 @@
+####dont remove the instance_id line
 ---
 - name: EC2
   hosts: localhost
