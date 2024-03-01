@@ -14,5 +14,7 @@
     amazon.aws.ec2_instance:
       state: absent
       region: "{{ ec2region }}"
+      instance_ids:
+        - i-098fd3ebcf6adf218
 
        
