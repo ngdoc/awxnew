@@ -12,19 +12,14 @@
   tasks:
   - name: create EC2
     amazon.aws.ec2_instance:
-      instance_ids:  i-098fd3ebcf6adf218
       iam_instance_profile: "{{ iam_role }}"
       name: "{{ name }}"
       instance_type: "{{ instancetype }}"
       image_id: "{{ imageid }}"
       count: "{{ counts }}"
       region: "{{ ec2region }}"
-      state: stopped
+      state: present
       tags:
         foo: bar
 
-- name: restart a particular instance by its ID
-  amazon.aws.ec2_instance:
-    state: restarted
-    instance_ids:
-      - i-12345678
+
