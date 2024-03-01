@@ -15,6 +15,6 @@
       state: absent
       region: "{{ ec2region }}"
       instance_ids:
-        
+        - i-0c60afb3b5f7adae8
 
        
