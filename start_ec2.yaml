@@ -10,12 +10,9 @@
     iam_role: EC2SSM
     
   tasks:
-  - name: reboot EC2
+  - name: restart a particular instance by its ID
     amazon.aws.ec2_instance:
-      name: "{{ name }}"
+      state: started
       region: "{{ ec2region }}"
-     # network:
-     #   assign_public_ip: true
-     #   security_group: default
-     #   vpc_subnet_id: subnet-0123456
-      state: stopped
+      instance_ids:
+        - i-098fd3ebcf6adf218
