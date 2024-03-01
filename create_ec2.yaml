@@ -2,7 +2,7 @@
 - name: EC2
   hosts: localhost
   vars:
-    name: test
+    name: test2
     instancetype: t2.micro
     imageid: ami-0c20d88b0021158c6
     counts: 1
@@ -22,6 +22,6 @@
      #   assign_public_ip: true
      #   security_group: default
      #   vpc_subnet_id: subnet-0123456
-      state: absent
+      state: stopped
       tags:
         foo: bar
