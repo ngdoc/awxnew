@@ -2,7 +2,7 @@
 - name: EC2
   hosts: localhost
   vars:
-    name: test2
+    name: test3
     instancetype: t2.micro
     imageid: ami-0c20d88b0021158c6
     counts: 1
