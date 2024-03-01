@@ -12,6 +12,7 @@
   tasks:
   - name: create EC2
     amazon.aws.ec2_instance:
+      instance_ids:  i-098fd3ebcf6adf218
       iam_instance_profile: "{{ iam_role }}"
       name: "{{ name }}"
       instance_type: "{{ instancetype }}"
